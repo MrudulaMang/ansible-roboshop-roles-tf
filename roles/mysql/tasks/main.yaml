@@ -9,6 +9,14 @@
     state: restarted
     enabled: yes
 
+- name: install botocore and boto3
+  ansible.builtin.pip:
+    name: "{{item}}"
+    executable: pip3.9
+  loop:
+  - boto3
+  - botocore       
+
 - name: allow remote connections
   ansible.builtin.replace:
     path: /etc/mysql/mysql.conf
