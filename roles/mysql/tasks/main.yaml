@@ -9,5 +9,11 @@
     state: restarted
     enabled: yes
 
+- name: allow remote connections
+  ansible.builtin.replace:
+    path: /etc/mysql/mysql.conf
+    regexp: '127.0.0.1'
+    replace: '0.0.0.0'
+
 - name: setup root password
   ansible.builtin.command: mysql_secure_installation --set-root-pass "{{ MYSQL_ROOT_PASSWORD }}"
