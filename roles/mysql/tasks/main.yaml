@@ -19,7 +19,7 @@
 
 - name: allow remote connections
   ansible.builtin.replace:
-    path: /etc/mysql/mysql.conf
+    path: /etc/my.cnf
     regexp: '127.0.0.1'
     replace: '0.0.0.0'
 
