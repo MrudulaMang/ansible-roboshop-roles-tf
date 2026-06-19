@@ -10,7 +10,7 @@ MYSQL_HOST: mysql-"{{ env }}".devopsgeek.online
 SHIPPING_HOST: shipping.backend-alb-{{ env }}.devopsgeek.online
 RABBITMQ_HOST: rabbitmq-"{{ env }}".devopsgeek.online
 PAYMENT_HOST: payment.backend-alb-{{ env }}.devopsgeek.online
-app_version: {{ app_version }}
+app_version: "{{ app_version }}"
 
 # ansible_user: ec2-user
 # ansible_password: DevOps321
